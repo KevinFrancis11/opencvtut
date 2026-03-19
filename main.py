@@ -1,13 +1,17 @@
 import cv2 as cv
 
-img = cv.imread("bird.jpg",33)
+img1 = cv.imread('bird.jpg')
 
-resizedImg = cv.resize(img, (700,500))
+img1Resize = cv.resize(img1, (600,700))
 
+cv.imshow('binary', img1Resize)
 
-cv.imshow("Image", resizedImg)
+print(type(img1))
+print(img1Resize.shape)
+print(img1Resize.dtype)
+print(img1Resize.size)
 
-cv.imwrite('new.jpg', resizedImg)
+print(img1Resize)
 
 cv.waitKey(0)
 
